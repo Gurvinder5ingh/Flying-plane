@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background-color: #77b3d4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cloud1, .cloud2, .cloud3 {
+	position: absolute;
+	height: 100px;
+	right: 0%;
+}
+
+.wind {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 30%;	
+
+}
+
+.wind1, .wind3, .wind4 {
+	position: absolute;
+	height: 10vh;
+	z-index: -1;	
+}
+
+.wind1 {
+	top: 30%;
+	transform: translateX(40vh);
+	animation: winds 5s ease-in infinite;
+
+}
+
+
+.wind3 {
+	top: 60%;
+	transform: translateX(20vh);
+	animation: winds 5s ease-in infinite;
+	
+}
+
+.wind4 {
+	top: 70%;
+	transform: translateX(-20vh);
+	animation: winds 5s ease-in infinite;
+		
+}
+
+
+
+.cloud1 {
+	top: 10%;
+	transform: translateX(50vh);
+	animation: clouds 2.9s ease-in infinite ;
+
+}
+
+.cloud2 {
+	top: 30%;
+	transform: translateX(30vh);
+	animation: clouds 4s ease infinite ;
+	
+}
+
+.cloud3 {
+	top: 70%; 
+	transform: translateX(40vh);
+	animation: clouds 2.6s ease-in infinite ;	
+}
+
+.airplane {	
+	position: absolute;
+	height: 40vh;
+	top: 30vh;
+	left: 46vh;
+}
+
+
+.airplane {	
+	z-index: 1;
+	height: 40vh;
+	animation: airplane 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes airplane {
+
+	from{
+		transform: translateY(0px);
+
+	}
+
+	to {
+		transform: translateY(25px);
+
+	}
+}
+
+
+@keyframes clouds {
+
+	from{
+		right: 0;
+
+	}
+
+	to {
+		
+		right: 130%;
+
+	}
+}
+
+@keyframes winds {
+
+	from{
+		right: 0;
+
+	}
+
+	to {
+		
+		right: 130%;
+
+	}
+}
+	
+
+	
+
+
+
